@@ -16,6 +16,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 	<meta name="apple-mobile-web-app-title" content=" - Доставка суші в Києві" />
 	<link rel="manifest" href="/site.webmanifest" />
+	<script async src="https://telegram.org/js/telegram-widget.js?21"></script>
 	<title>Kyivgold: ювелірні вироби із золота та срібла за ціною від виробника</title>
 </svelte:head>
 
