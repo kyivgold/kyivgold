@@ -10,4 +10,4 @@
 </script>
 
 <!-- <button onclick={handlerLogin}>Login via Telegram</button> -->
-<a href="https://t.me/kyivgoldbot?start=123">Login via Telegram</a>
+<a href="https://t.me/kyivgoldbot?start=login">Login via Telegram</a>
