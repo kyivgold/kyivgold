@@ -4,6 +4,5 @@
 	const { isMobile, ua } = data;
 </script>
 
-<h3>{!isMobile ? 'PC' : 'Mobile'}</h3>
-<h4>{ua}</h4>
-<TelegramLogin />
+<h4>Авторизуватися за допомогою Telegram</h4>
+<TelegramLogin {isMobile} />
