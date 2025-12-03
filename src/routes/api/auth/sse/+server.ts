@@ -1,6 +1,6 @@
 // src/routes/api/auth/sse/+server.ts
 import type { RequestHandler } from './$types';
-import { sessions } from '$lib/sessions';
+import { sessions } from '$lib/types/sessions';
 
 export const GET: RequestHandler = ({ url }) => {
 	const sessionId = url.searchParams.get('sessionId');
@@ -11,7 +11,6 @@ export const GET: RequestHandler = ({ url }) => {
 		start(controller) {
 			const check = setInterval(() => {
 				const session = sessions[sessionId];
-				console.log('sessionId, session', sessionId, session);
 				if (session?.authorized) {
 					controller.enqueue(
 						new TextEncoder().encode(`event: authorized\ndata: ${JSON.stringify(session)}\n\n`)
@@ -19,7 +18,7 @@ export const GET: RequestHandler = ({ url }) => {
 					controller.close();
 					clearInterval(check);
 				}
-			}, 1000);
+			}, 500);
 		}
 	});
 

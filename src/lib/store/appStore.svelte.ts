@@ -1,4 +1,4 @@
-import type { Product, Category } from '$lib/types';
+import type { Product, Category } from '$lib/types/types';
 
 interface AppState {
 	products: Product[];

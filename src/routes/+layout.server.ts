@@ -1,5 +1,5 @@
-import { API_SERVER_URL } from '$env/static/private';
-import type { InitData } from '$lib/types';
+import { API_SERVER_URL, API_KEY } from '$env/static/private';
+import type { InitData } from '$lib/types/types';
 
 import { error } from '@sveltejs/kit';
 
@@ -33,7 +33,8 @@ export async function load({ fetch }) {
 		method: 'POST',
 		headers: {
 			Accept: 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'API-Key': API_KEY
 		},
 		body: JSON.stringify({})
 	};

@@ -1,4 +1,4 @@
-// src/lib/sessions.ts
+// src/lib/types/sessions.ts
 interface Session {
 	telegramId?: number;
 	username?: string;

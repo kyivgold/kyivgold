@@ -1,6 +1,6 @@
 // src/routes/api/auth/telegram/+server.ts
 import type { RequestHandler } from './$types';
-import { sessions } from '$lib/sessions';
+import { sessions } from '$lib/types/sessions';
 
 export const POST: RequestHandler = async ({ request }) => {
 	const data = await request.json();
@@ -21,5 +21,5 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	console.log('User authorized:', sessions[sessionId]);
 
-	return new Response('OK!!!');
+	return new Response('OK');
 };

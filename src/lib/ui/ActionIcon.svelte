@@ -15,7 +15,15 @@
 </script>
 
 {#if href}
-	<a class={commonClasses} {href} title={tooltip} style:color class:disabled>
+	<a
+		class={commonClasses}
+		{href}
+		title={tooltip}
+		style:color
+		class:disabled
+		style:--btn-width={`${width}px`}
+		style:--btn-height={`${height}px`}
+	>
 		<Icon class="icon-svg" />
 	</a>
 {:else}
